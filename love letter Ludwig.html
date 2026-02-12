@@ -1,0 +1,62 @@
+OCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Love letter for crush</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="love-letter-2.css" />
+  </head>
+  <body>
+    <div class="envlope-wrapper">
+      <div id="envelope" class="close">
+        <div class="front flap"></div>
+        <div class="front pocket"></div>
+        <div class="letter">
+          <div class="words line1">To: Lufwig</div>
+          <div class="words line2">I am glad, I did not</div>
+          <div class="words line3">swiped left!</div>
+          <div class="words line4">xoxo Daniel</div>
+        </div>
+        <div class="hearts">
+          <div class="heart a1"></div>
+          <div class="heart a2"></div>
+          <div class="heart a3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="reset">
+      <button id="open">Open</button>
+      <button id="reset">Close</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const envelope = document.getElementById("envelope");
+        const btnOpen = document.getElementById("open");
+        const btnReset = document.getElementById("reset");
+
+        function openEnvelope() {
+          envelope.classList.add("open");
+          envelope.classList.remove("close");
+        }
+
+        function closeEnvelope() {
+          envelope.classList.add("close");
+          envelope.classList.remove("open");
+        }
+
+        envelope.addEventListener("click", openEnvelope);
+        btnOpen.addEventListener("click", openEnvelope);
+        btnReset.addEventListener("click", closeEnvelope);
+      });
+    </script>
+
+    <!-- Optional: externe JS-Datei, falls du sie noch benutzen willst -->
+    <script src="love-letter-2.js"></script>
+  </body>
+</html>
